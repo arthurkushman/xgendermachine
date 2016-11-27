@@ -4,20 +4,21 @@ namespace xgendermachine;
 
 class GenderBase implements LanguageInterface, FactorInterface
 {
-    const MALE   = 'male';
+    const MALE = 'male';
     const FEMALE = 'female';
 
+    // an array of settings for every language
     private $languages = [
         self::LANGUAGE_RU => [
-            self::MALE   => [
-                'ан'   => self::FACTOR_HI,
-                'ур'   => self::FACTOR_HI,
-                'ор'   => self::FACTOR_HI,
-                'ей'   => self::FACTOR_HI,
-                'ий'   => self::FACTOR_HI,
+            self::MALE => [
+                'ан' => self::FACTOR_HI,
+                'ур' => self::FACTOR_HI,
+                'ор' => self::FACTOR_HI,
+                'ей' => self::FACTOR_HI,
+                'ий' => self::FACTOR_HI,
                 'илья' => self::FACTOR_HI,
-                'ем'   => self::FACTOR_HI,
-                'ав'   => self::FACTOR_HI,
+                'ем' => self::FACTOR_HI,
+                'ав' => self::FACTOR_HI,
             ],
             self::FEMALE => [
                 'на' => self::FACTOR_HI,
@@ -28,16 +29,29 @@ class GenderBase implements LanguageInterface, FactorInterface
                 'ра' => self::FACTOR_HI,
                 'ля' => self::FACTOR_MID_HI,
                 'ья' => self::FACTOR_MID,
-                'я'  => self::FACTOR_LOW,
-                'а'  => self::FACTOR_LOW
+                'я' => self::FACTOR_LOW,
+                'а' => self::FACTOR_LOW
             ],
             self::ENDING_LENGTH => self::RU_ENDING_LENGTH,
         ],
         self::LANGUAGE_EN => [
-            self::MALE   => [
-                'an'  => self::FACTOR_HI,
-                'ck'  => self::FACTOR_HI,
-                'rry' => self::FACTOR_HI,
+            self::MALE => [
+                'an' => self::FACTOR_HI,
+                'ck' => self::FACTOR_HI,
+                'ry' => self::FACTOR_HI,
+                'on' => self::FACTOR_HI,
+                'od' => self::FACTOR_HI,
+                'il' => self::FACTOR_HI,
+                'rt' => self::FACTOR_HI,
+                'or' => self::FACTOR_HI,
+                'is' => self::FACTOR_HI,
+                'in' => self::FACTOR_HI,
+                'de' => self::FACTOR_MID_HI,
+                'ay' => self::FACTOR_MID_HI,
+                'ir' => self::FACTOR_MID_HI,
+                'el' => self::FACTOR_MID_HI,
+                'ey' => self::FACTOR_MID,
+                'th' => self::FACTOR_MID,
             ],
             self::FEMALE => [
                 'cy' => self::FACTOR_HI,

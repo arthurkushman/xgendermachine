@@ -7,4 +7,4 @@ require_once 'GenderMachine.php';
 $gender = new \xgendermachine\GenderMachine();
 $gender->setLang('ru');
 
-echo $gender->getGender('Анатолий');
+echo $gender->getGender('Мирослав');
