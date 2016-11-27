@@ -31,6 +31,7 @@ class GenderBase implements LanguageInterface, FactorInterface
                 'я'  => self::FACTOR_LOW,
                 'а'  => self::FACTOR_LOW
             ],
+            self::ENDING_LENGTH => self::RU_ENDING_LENGTH,
         ],
         self::LANGUAGE_EN => [
             self::MALE   => [
@@ -44,6 +45,7 @@ class GenderBase implements LanguageInterface, FactorInterface
                 'fy' => self::FACTOR_LOW,
                 'sa' => self::FACTOR_HI,
             ],
+            self::ENDING_LENGTH => self::EN_ENDING_LENGTH,
         ]
     ];
 

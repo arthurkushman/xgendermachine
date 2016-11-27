@@ -8,4 +8,3 @@ $gender = new \xgendermachine\GenderMachine();
 $gender->setLang('ru');
 
 echo $gender->getGender('Анатолий');
-exit;

@@ -13,20 +13,22 @@ class GenderMachine extends GenderBase
     {
         $factorMaleSum   = 0;
         $factorFemaleSum = 0;
-        $endings         = $this->getEndings($this->lang);
-        foreach($endings[self::MALE] as $k => $v)
+
+        $langSettings         = $this->getEndings($this->lang);
+        $nameEnding = mb_substr($name, mb_strlen($name, self::UTF8) - $langSettings[self::ENDING_LENGTH], null, self::UTF8);
+        foreach($langSettings[self::MALE] as $k => $v)
         {
-            if(mb_strrpos($name, mb_strtolower($k, self::UTF8), null, self::UTF8) !== false)
+            if(mb_strrpos($nameEnding, mb_strtolower($k, self::UTF8), null, self::UTF8) !== false)
             {
-               echo $factorMaleSum += $k;
+                $factorMaleSum += $v;
             }
         }
 
-        foreach($endings[self::FEMALE] as $k => $v)
+        foreach($langSettings[self::FEMALE] as $k => $v)
         {
-            if(mb_strrpos($name, mb_strtolower($k, self::UTF8), null, self::UTF8) !== false)
+            if(mb_strrpos($nameEnding, mb_strtolower($k, self::UTF8), null, self::UTF8) !== false)
             {
-                $factorFemaleSum += $k;
+                $factorFemaleSum += $v;
             }
         }
 
