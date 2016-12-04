@@ -56,8 +56,16 @@ class GenderBase implements LanguageInterface, FactorInterface
             self::FEMALE => [
                 'cy' => self::FACTOR_HI,
                 'na' => self::FACTOR_HI,
-                'fy' => self::FACTOR_LOW,
+                'ie' => self::FACTOR_HI,
+                'ce' => self::FACTOR_HI,
+                'ia' => self::FACTOR_HI,
                 'sa' => self::FACTOR_HI,
+                'by' => self::FACTOR_HI,
+                'ly' => self::FACTOR_HI,
+                'ah' => self::FACTOR_MID_HI,
+                'er' => self::FACTOR_MID_HI,
+                'tt' => self::FACTOR_MID_HI,
+                'fy' => self::FACTOR_LOW,
             ],
             self::ENDING_LENGTH => self::EN_ENDING_LENGTH,
         ]
